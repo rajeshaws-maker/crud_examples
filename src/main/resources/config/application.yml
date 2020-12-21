@@ -1,9 +1,12 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/crud_example
-    username: postgres
-    password: Q4S3C2v1
-    driver-class-name: org.postgresql.Driver
+    url: jdbc:mysql://107.21.171.206:3306/devlabdb?useSSL=false
+    username: root
+    password: root@123
+    driver-class-name: com.mysql.jdbc.Driver
   jpa:
-    properties:
+    properties:        
+        hibernate.dialect: org.hibernate.dialect.MySQLDialect
+        hibernate.show_sql: true
+        hibernate.format_sql: true
         hibernate.hbm2ddl.auto: update
